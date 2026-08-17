@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <rect width="400" height="250" fill="#0f172a" rx="8" />
+  <!-- Workshop / Lab Visual -->
+  <circle cx="200" cy="110" r="60" fill="#0284c7" opacity="0.2" />
+  <circle cx="200" cy="110" r="40" fill="#0284c7" opacity="0.4" />
+  <polygon points="170,80 230,80 250,140 150,140" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+  <!-- Seismic Wave representation -->
+  <path d="M 50 180 Q 90 140 130 180 T 210 180 T 290 180 T 370 180" fill="none" stroke="#f59e0b" stroke-width="3" />
+  <text x="200" y="225" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">SEISMIC RESILIENCE RESEARCH &amp; WORKSHOP</text>
+</svg>

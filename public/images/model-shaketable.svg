@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%">
+  <rect width="500" height="350" fill="#1e1b4b" rx="10" />
+  <!-- Shake Table Base -->
+  <rect x="80" y="240" width="340" height="30" fill="#312e81" stroke="#6366f1" stroke-width="2" rx="4" />
+  <!-- Actuators -->
+  <rect x="40" y="245" width="40" height="20" fill="#4f46e5" />
+  <line x1="80" y1="255" x2="10" y2="255" stroke="#a5b4fc" stroke-width="4" />
+  <!-- Specimen Wall Frame on Shake Table -->
+  <rect x="150" y="80" width="200" height="160" fill="none" stroke="#fbbf24" stroke-width="4" />
+  <line x1="150" y1="80" x2="350" y2="240" stroke="#f59e0b" stroke-width="3" />
+  <line x1="350" y1="80" x2="150" y2="240" stroke="#f59e0b" stroke-width="3" />
+  <text x="250" y="315" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e0e7ff">SHAKE TABLE SEISMIC SIMULATION TEST RIG</text>
+</svg>

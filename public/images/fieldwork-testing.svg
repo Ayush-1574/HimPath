@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%">
+  <rect width="500" height="350" fill="#0f172a" rx="10" />
+  <!-- Testing / Sensor Dashboard representation -->
+  <rect x="50" y="50" width="400" height="220" fill="#1e293b" rx="6" stroke="#334155" stroke-width="2" />
+  <path d="M 60 160 Q 110 80 160 160 T 260 160 T 360 160 T 440 160" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <path d="M 60 160 Q 130 220 200 160 T 340 160 T 440 160" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="4 2" />
+  <circle cx="160" cy="160" r="6" fill="#ef4444" />
+  <circle cx="260" cy="160" r="6" fill="#ef4444" />
+  <circle cx="360" cy="160" r="6" fill="#ef4444" />
+  <text x="250" y="310" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#94a3b8">DYNAMIC AMBIENT VIBRATION FREQUENCY SPECTRUM</text>
+</svg>

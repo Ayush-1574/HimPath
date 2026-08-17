@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="100%" height="100%">
+  <!-- Orange Banner Background for the text side -->
+  <rect x="120" y="0" width="360" height="120" fill="#f25c05" />
+  
+  <!-- Logo Emblem (Left Circle/Oval) -->
+  <circle cx="60" cy="60" r="56" fill="#f25c05" />
+  <circle cx="60" cy="60" r="52" fill="#ffffff" stroke="#000000" stroke-width="2.5" />
+  
+  <!-- Sky background in top half of emblem -->
+  <path d="M 12 55 A 48 48 0 0 1 108 55 Z" fill="#2980b9" />
+  
+  <!-- Mountain Peaks -->
+  <polygon points="60,22 42,55 78,55" fill="#ffffff" stroke="#1c3b5e" stroke-width="1.5" />
+  <polygon points="36,34 20,55 52,55" fill="#ffffff" stroke="#1c3b5e" stroke-width="1.5" />
+  <polygon points="84,34 68,55 100,55" fill="#ffffff" stroke="#1c3b5e" stroke-width="1.5" />
+  
+  <!-- Mountain Shading / Ridges -->
+  <line x1="60" y1="22" x2="60" y2="55" stroke="#1c3b5e" stroke-width="1.5" />
+  <line x1="36" y1="34" x2="36" y2="55" stroke="#1c3b5e" stroke-width="1.5" />
+  <line x1="84" y1="34" x2="84" y2="55" stroke="#1c3b5e" stroke-width="1.5" />
+  
+  <!-- Vernacular House Silhouette -->
+  <polygon points="60,38 48,48 72,48" fill="#d35400" />
+  <rect x="52" y="48" width="16" height="12" fill="#8d6e63" />
+  <rect x="58" y="52" width="4" height="8" fill="#3e2723" />
+  
+  <!-- CEVA Black Badge Oval -->
+  <ellipse cx="60" cy="84" rx="42" ry="24" fill="#000000" />
+  <text x="60" y="93" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="25" fill="#ffffff" text-anchor="middle" letter-spacing="1">CEVA</text>
+  
+  <!-- Divider Line -->
+  <line x1="120" y1="8" x2="120" y2="112" stroke="#000000" stroke-width="2.5" />
+  
+  <!-- Text on Orange Header -->
+  <text x="135" y="42" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="27" fill="#000000">Centre of</text>
+  <text x="135" y="74" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="27" fill="#000000">Excellence on</text>
+  <text x="135" y="104" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="25" fill="#1a1a1a">sustainable</text>
+  <text x="275" y="104" font-family="'Outfit', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="25" fill="#000000">Vernacular</text>
+</svg>

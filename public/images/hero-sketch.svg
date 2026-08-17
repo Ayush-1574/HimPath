@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <pattern id="slate-shingles" width="20" height="12" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 10 6 L 20 0 Z" fill="#e8eaed" stroke="#475569" stroke-width="0.8" />
+      <path d="M 10 6 L 20 12 L 0 12 Z" fill="#f1f5f9" stroke="#475569" stroke-width="0.8" />
+    </pattern>
+    <pattern id="timber-hatching" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#64748b" stroke-width="0.75" />
+      <line x1="12" y1="0" x2="0" y2="12" stroke="#64748b" stroke-width="0.75" />
+    </pattern>
+    <pattern id="stone-pattern" width="24" height="14" patternUnits="userSpaceOnUse">
+      <rect x="1" y="1" width="10" height="5" fill="#f8fafc" stroke="#64748b" stroke-width="0.6" />
+      <rect x="12" y="1" width="10" height="5" fill="#f1f5f9" stroke="#64748b" stroke-width="0.6" />
+      <rect x="6" y="7" width="12" height="5" fill="#f8fafc" stroke="#64748b" stroke-width="0.6" />
+    </pattern>
+  </defs>
+
+  <!-- Base Ground & Shadow -->
+  <ellipse cx="290" cy="650" rx="240" ry="22" fill="#e2e8f0" opacity="0.6" />
+
+  <!-- PLINTH (Stone Base) -->
+  <polygon points="120,640 460,640 440,610 140,610" fill="#f1f5f9" stroke="#334155" stroke-width="2" />
+  <line x1="120" y1="640" x2="460" y2="640" stroke="#1e293b" stroke-width="3" />
+
+  <!-- GROUND FLOOR (Interlocking Timber & Dressed Stone) -->
+  <!-- Left Wall Section -->
+  <polygon points="140,610 180,610 180,440 140,440" fill="#e2e8f0" stroke="#334155" stroke-width="2" />
+  <!-- Main Facade Ground Floor -->
+  <rect x="180" y="440" width="220" height="170" fill="#f8fafc" stroke="#334155" stroke-width="2" />
+  <!-- Stone Infill Pattern -->
+  <rect x="185" y="445" width="210" height="160" fill="url(#stone-pattern)" opacity="0.8" />
+  
+  <!-- Timber Horizontal Ties (KATH) Ground Floor -->
+  <rect x="135" y="450" width="270" height="12" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.8" />
+  <rect x="135" y="495" width="270" height="12" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.8" />
+  <rect x="135" y="540" width="270" height="12" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.8" />
+  <rect x="135" y="585" width="270" height="12" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.8" />
+
+  <!-- Corner Joinery Details (Kath-Kuni lap joints) -->
+  <rect x="130" y="448" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="130" y="493" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="130" y="538" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="130" y="583" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+
+  <rect x="395" y="448" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="395" y="493" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="395" y="538" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+  <rect x="395" y="583" width="16" height="16" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5" />
+
+  <!-- Ground Floor Door (Carved Himalayan Portal) -->
+  <rect x="255" y="495" width="70" height="115" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.5" />
+  <rect x="265" y="515" width="50" height="95" fill="#334155" stroke="#0f172a" stroke-width="1.5" />
+  <!-- Door Lintel & Carving lines -->
+  <rect x="245" y="488" width="90" height="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
+  <line x1="290" y1="515" x2="290" y2="610" stroke="#0f172a" stroke-width="1.5" />
+
+  <!-- Ground Floor Windows -->
+  <rect x="200" y="530" width="38" height="48" fill="#f8fafc" stroke="#0f172a" stroke-width="2" />
+  <rect x="206" y="536" width="26" height="36" fill="#334155" />
+  <line x1="219" y1="536" x2="219" y2="572" stroke="#ffffff" stroke-width="1.2" />
+  <line x1="206" y1="554" x2="232" y2="554" stroke="#ffffff" stroke-width="1.2" />
+
+  <rect x="342" y="530" width="38" height="48" fill="#f8fafc" stroke="#0f172a" stroke-width="2" />
+  <rect x="348" y="536" width="26" height="36" fill="#334155" />
+  <line x1="361" y1="536" x2="361" y2="572" stroke="#ffffff" stroke-width="1.2" />
+  <line x1="348" y1="554" x2="374" y2="554" stroke="#ffffff" stroke-width="1.2" />
+
+  <!-- CANTILEVERED UPPER FLOOR (Wooden Balcony / Chhajja) -->
+  <!-- Cantilevered Wooden Brackets (Kadki) -->
+  <polygon points="120,440 100,420 150,420 150,440" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
+  <polygon points="420,440 440,420 400,420 400,440" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
+  
+  <!-- Upper Floor Main Box (Overhanging) -->
+  <rect x="95" y="240" width="350" height="180" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+
+  <!-- Timber Diagonal Cross Bracing (Dhajji / Trellis) on Upper Floor -->
+  <rect x="100" y="245" width="90" height="170" fill="url(#timber-hatching)" opacity="0.35" stroke="#334155" stroke-width="1.5" />
+  <line x1="100" y1="245" x2="190" y2="415" stroke="#1e293b" stroke-width="2" />
+  <line x1="190" y1="245" x2="100" y2="415" stroke="#1e293b" stroke-width="2" />
+
+  <rect x="350" y="245" width="90" height="170" fill="url(#timber-hatching)" opacity="0.35" stroke="#334155" stroke-width="1.5" />
+  <line x1="350" y1="245" x2="440" y2="415" stroke="#1e293b" stroke-width="2" />
+  <line x1="440" y1="245" x2="350" y2="415" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Upper Cantilevered Balcony Gallery (Chhajja / Perna) -->
+  <rect x="190" y="245" width="160" height="170" fill="#f8fafc" stroke="#0f172a" stroke-width="2" />
+  
+  <!-- Balcony Arched Openings & Wooden Pillars -->
+  <path d="M 205 320 Q 220 280 235 320" fill="none" stroke="#0f172a" stroke-width="2" />
+  <path d="M 245 320 Q 270 270 295 320" fill="none" stroke="#0f172a" stroke-width="2" />
+  <path d="M 305 320 Q 320 280 335 320" fill="none" stroke="#0f172a" stroke-width="2" />
+
+  <!-- Balcony Railing with Geometric Jali / Wood Lattice -->
+  <rect x="190" y="325" width="160" height="50" fill="#f1f5f9" stroke="#0f172a" stroke-width="2" />
+  <!-- Jali diagonal lines -->
+  <line x1="195" y1="325" x2="215" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="215" y1="325" x2="195" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="225" y1="325" x2="245" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="245" y1="325" x2="225" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="255" y1="325" x2="275" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="275" y1="325" x2="255" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="285" y1="325" x2="305" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="305" y1="325" x2="285" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="315" y1="325" x2="335" y2="375" stroke="#475569" stroke-width="1.5" />
+  <line x1="335" y1="325" x2="315" y2="375" stroke="#475569" stroke-width="1.5" />
+
+  <!-- Upper Balcony Door Opening -->
+  <rect x="255" y="300" width="30" height="75" fill="#1e293b" />
+
+  <!-- Upper Windows on Sides -->
+  <rect x="120" y="280" width="45" height="60" fill="#f8fafc" stroke="#0f172a" stroke-width="2" />
+  <rect x="125" y="285" width="35" height="50" fill="#1e293b" />
+  <line x1="142" y1="285" x2="142" y2="335" stroke="#ffffff" stroke-width="1.5" />
+  <line x1="125" y1="310" x2="160" y2="310" stroke="#ffffff" stroke-width="1.5" />
+
+  <rect x="375" y="280" width="45" height="60" fill="#f8fafc" stroke="#0f172a" stroke-width="2" />
+  <rect x="380" y="285" width="35" height="50" fill="#1e293b" />
+  <line x1="397" y1="285" x2="397" y2="335" stroke="#ffffff" stroke-width="1.5" />
+  <line x1="380" y1="310" x2="415" y2="310" stroke="#ffffff" stroke-width="1.5" />
+
+  <!-- PITCHED SLATE ROOF (Traditional Gable & Overhangs) -->
+  <!-- Gable Triangular Wall -->
+  <polygon points="100,240 270,110 440,240" fill="#f8fafc" stroke="#0f172a" stroke-width="2.5" />
+  <line x1="270" y1="110" x2="270" y2="240" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3" />
+
+  <!-- Deep Slate Overhanging Roof Planes -->
+  <!-- Left Slope -->
+  <polygon points="60,250 270,85 270,110 80,260" fill="#64748b" stroke="#0f172a" stroke-width="2" />
+  <!-- Right Slope (Perspective 3D) -->
+  <polygon points="270,85 480,250 460,260 270,110" fill="#94a3b8" stroke="#0f172a" stroke-width="2" />
+  
+  <!-- Slate Roof Texture -->
+  <polygon points="65,245 270,88 475,245 440,255 270,115 95,255" fill="url(#slate-shingles)" />
+
+  <!-- Ridge Beam (Purlin / Finial Cap) -->
+  <line x1="270" y1="80" x2="270" y2="110" stroke="#0f172a" stroke-width="3" />
+  <circle cx="270" cy="78" r="6" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
+
+  <!-- Wooden Eaves and Fascia Board -->
+  <line x1="60" y1="250" x2="270" y2="85" stroke="#0f172a" stroke-width="4" />
+  <line x1="270" y1="85" x2="480" y2="250" stroke="#0f172a" stroke-width="4" />
+
+  <!-- Architectural Dimension & Callout Lines (Subtle sketch details) -->
+  <path d="M 500,180 L 525,180 L 525,430 L 500,430" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3" />
+  <text x="532" y="310" font-family="'Courier New', monospace" font-size="11" fill="#64748b" transform="rotate(90 532,310)">CANTILEVER CHHAJJA</text>
+  
+  <path d="M 500,460 L 525,460 L 525,620 L 500,620" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3" />
+  <text x="532" y="545" font-family="'Courier New', monospace" font-size="11" fill="#64748b" transform="rotate(90 532,545)">KATH-KUNI PLINTH</text>
+</svg>

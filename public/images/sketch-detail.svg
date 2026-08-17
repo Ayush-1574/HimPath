@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%">
+  <rect width="500" height="350" fill="#f8fafc" rx="10" stroke="#cbd5e1" stroke-width="2" />
+  <!-- Grid lines -->
+  <line x1="50" y1="50" x2="450" y2="50" stroke="#e2e8f0" />
+  <line x1="50" y1="100" x2="450" y2="100" stroke="#e2e8f0" />
+  <line x1="50" y1="150" x2="450" y2="150" stroke="#e2e8f0" />
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#e2e8f0" />
+  <line x1="50" y1="250" x2="450" y2="250" stroke="#e2e8f0" />
+  <!-- Isometric Joint Line Drawing -->
+  <polygon points="180,160 250,110 320,160 250,210" fill="#f1f5f9" stroke="#0f172a" stroke-width="3" />
+  <polygon points="180,160 250,210 250,260 180,210" fill="#e2e8f0" stroke="#0f172a" stroke-width="3" />
+  <polygon points="320,160 250,210 250,260 320,210" fill="#cbd5e1" stroke="#0f172a" stroke-width="3" />
+  <!-- Dowel / Kadki peg -->
+  <ellipse cx="250" cy="145" rx="12" ry="6" fill="#f59e0b" stroke="#78350f" stroke-width="1.5" />
+  <text x="250" y="310" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#0f172a">ISOMETRIC INTERLOCKING JOINT DETAIL [CAD-01]</text>
+</svg>

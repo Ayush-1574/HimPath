@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Activity {
+  id          String   @id @default(cuid())
+  title       String
+  category    String   // Workshop, Field Visit, Seminar, Conference, Research
+  date        DateTime
+  location    String
+  description String
+  imageUrl    String?
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Technique {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  region      String   // Himachal Pradesh, Uttarakhand, Kashmir, etc.
+  materials   String   // Timber, Stone, Mud, Slate
+  description String
+  features    String[] // Array of key features / seismic resilience attributes
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GalleryItem {
+  id          String   @id @default(cuid())
+  title       String
+  category    String   // Architecture, Sketches, Fieldwork, Models
+  location    String?
+  imageUrl    String
+  description String?
+  createdAt   DateTime @default(now())
+}
+
+model Download {
+  id          String   @id @default(cuid())
+  title       String
+  category    String   // Research Paper, Manual, Policy Brief, Report
+  fileSize    String
+  fileType    String   // PDF, DOCX
+  downloadUrl String
+  date        DateTime @default(now())
+  createdAt   DateTime @default(now())
+}
+
+model FAQ {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String
+  category  String   // General, Techniques, Research, Collaboration
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("UNREAD") // UNREAD, REVIEWED, ARCHIVED
+  createdAt DateTime @default(now())
+}
+
+model TeamMember {
+  id          String   @id @default(cuid())
+  name        String
+  role        String   // Principal Investigator, Co-PI, Research Scholar
+  department  String   // Department of Civil Engineering, IIT Ropar
+  bio         String?
+  imageUrl    String?
+  email       String?
+  createdAt   DateTime @default(now())
+}

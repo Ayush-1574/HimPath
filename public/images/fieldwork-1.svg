@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%">
+  <rect width="400" height="250" fill="#1e293b" rx="8" />
+  <!-- Mountains in background -->
+  <polygon points="40,160 140,60 240,160" fill="#334155" />
+  <polygon points="180,170 280,70 380,170" fill="#475569" />
+  <polygon points="120,180 200,90 280,180" fill="#64748b" />
+  <!-- Field tripod / scanner -->
+  <line x1="190" y1="170" x2="210" y2="170" stroke="#facc15" stroke-width="4" />
+  <line x1="200" y1="170" x2="175" y2="230" stroke="#facc15" stroke-width="3" />
+  <line x1="200" y1="170" x2="225" y2="230" stroke="#facc15" stroke-width="3" />
+  <circle cx="200" cy="160" r="10" fill="#ef4444" />
+  <text x="200" y="235" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">HIMALAYAN FIELD DOCUMENTATION &amp; TESTING</text>
+</svg>

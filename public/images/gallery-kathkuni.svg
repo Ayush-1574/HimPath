@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%">
+  <rect width="500" height="350" fill="#18181b" rx="10" />
+  <!-- Mountain Silhouette -->
+  <polygon points="20,200 150,80 280,200" fill="#27272a" />
+  <polygon points="200,200 350,60 480,200" fill="#3f3f46" />
+  <!-- Traditional House Silhouette -->
+  <polygon points="180,180 250,110 320,180" fill="#78350f" stroke="#d97706" stroke-width="2" />
+  <rect x="195" y="180" width="110" height="100" fill="#451a03" stroke="#d97706" stroke-width="2" />
+  <rect x="225" y="210" width="50" height="70" fill="#b45309" />
+  <text x="250" y="320" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#f4f4f5">HIMALAYAN KATH-KUNI HERITAGE STRUCTURE</text>
+</svg>

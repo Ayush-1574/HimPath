@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#f8fafc" rx="8" />
+  <!-- Kath Kuni Alternating Layer Section -->
+  <g transform="translate(50, 40)">
+    <!-- Timber Log 1 -->
+    <rect x="0" y="0" width="300" height="24" fill="#a16207" stroke="#451a03" stroke-width="2" rx="3" />
+    <!-- Stone Layer 1 -->
+    <rect x="30" y="24" width="240" height="30" fill="#94a3b8" stroke="#334155" stroke-width="1.5" />
+    <line x1="90" y1="24" x2="90" y2="54" stroke="#334155" stroke-width="1.5" />
+    <line x1="160" y1="24" x2="160" y2="54" stroke="#334155" stroke-width="1.5" />
+    <line x1="220" y1="24" x2="220" y2="54" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Timber Cross Beam (Perpendicular Joinery) -->
+    <rect x="0" y="54" width="300" height="24" fill="#854d0e" stroke="#451a03" stroke-width="2" rx="3" />
+    <!-- Interlocking corner pegs / Kadki pins -->
+    <circle cx="20" cy="66" r="6" fill="#facc15" stroke="#451a03" stroke-width="1.5" />
+    <circle cx="280" cy="66" r="6" fill="#facc15" stroke="#451a03" stroke-width="1.5" />
+
+    <!-- Stone Layer 2 -->
+    <rect x="30" y="78" width="240" height="30" fill="#94a3b8" stroke="#334155" stroke-width="1.5" />
+    <line x1="60" y1="78" x2="60" y2="108" stroke="#334155" stroke-width="1.5" />
+    <line x1="130" y1="78" x2="130" y2="108" stroke="#334155" stroke-width="1.5" />
+    <line x1="200" y1="78" x2="200" y2="108" stroke="#334155" stroke-width="1.5" />
+
+    <!-- Timber Log 3 -->
+    <rect x="0" y="108" width="300" height="24" fill="#a16207" stroke="#451a03" stroke-width="2" rx="3" />
+    <!-- Slate Roof Edge -->
+    <polygon points="-20,150 150,132 320,150 310,165 150,145 -10,165" fill="#475569" stroke="#0f172a" stroke-width="2" />
+  </g>
+  <text x="200" y="275" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#334155">KATH-KUNI DRY-STONE &amp; TIMBER INTERLOCKING DETAIL</text>
+</svg>
