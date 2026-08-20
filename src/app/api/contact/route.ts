@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
 
 export async function POST(request: Request) {
   try {
@@ -13,30 +12,26 @@ export async function POST(request: Request) {
       );
     }
 
-    // Try saving directly to PostgreSQL via Prisma
-    try {
-      const savedMessage = await prisma.contactMessage.create({
-        data: {
-          name,
-          email,
-          subject: subject || 'General Inquiry',
-          message,
-        },
-      });
+    // In a zero-database deployment (e.g. Vercel static/serverless),
+    // we safely log the message to stdout / cloud logs and acknowledge success.
+    console.log('[HiMPaTH Contact Submission]:', {
+      timestamp: new Date().toISOString(),
+      name,
+      email,
+      subject: subject || 'General Inquiry',
+      message,
+    });
 
-      return NextResponse.json({
-        success: true,
-        message: 'Your inquiry has been successfully recorded in the database.',
-        data: savedMessage,
-      });
-    } catch (dbErr) {
-      console.warn('Database write fallback:', dbErr);
-      return NextResponse.json({
-        success: true,
-        message: 'Thank you! Your message has been received.',
-        data: { name, email, subject, message },
-      });
-    }
+    return NextResponse.json({
+      success: true,
+      message: 'Thank you! Your inquiry has been received by HiMPaTH.',
+      data: {
+        name,
+        email,
+        subject: subject || 'General Inquiry',
+        receivedAt: new Date().toISOString(),
+      },
+    });
   } catch (error) {
     console.error('Contact submission error:', error);
     return NextResponse.json(

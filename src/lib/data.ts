@@ -1,6 +1,4 @@
-import { prisma } from './prisma';
-
-// Fallback seed data in case Postgres server is starting up or disconnected
+// In-memory data store for maximum performance and zero-database deployment
 export const fallbackData = {
   techniques: [
     {
@@ -231,71 +229,29 @@ export const fallbackData = {
 };
 
 export async function getTechniques() {
-  try {
-    const data = await prisma.technique.findMany({ orderBy: { createdAt: 'asc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for techniques:', err);
-  }
   return fallbackData.techniques;
 }
 
 export async function getTechniqueBySlug(slug: string) {
-  try {
-    const item = await prisma.technique.findUnique({ where: { slug } });
-    if (item) return item;
-  } catch (err) {
-    console.warn('Postgres fallback for technique by slug:', err);
-  }
   return fallbackData.techniques.find((t) => t.slug === slug) || fallbackData.techniques[0];
 }
 
 export async function getActivities() {
-  try {
-    const data = await prisma.activity.findMany({ orderBy: { date: 'desc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for activities:', err);
-  }
   return fallbackData.activities;
 }
 
 export async function getGallery() {
-  try {
-    const data = await prisma.galleryItem.findMany({ orderBy: { createdAt: 'desc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for gallery:', err);
-  }
   return fallbackData.gallery;
 }
 
 export async function getDownloads() {
-  try {
-    const data = await prisma.download.findMany({ orderBy: { createdAt: 'desc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for downloads:', err);
-  }
   return fallbackData.downloads;
 }
 
 export async function getFAQs() {
-  try {
-    const data = await prisma.fAQ.findMany({ orderBy: { order: 'asc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for FAQs:', err);
-  }
   return fallbackData.faqs;
 }
 
 export async function getTeam() {
-  try {
-    const data = await prisma.teamMember.findMany({ orderBy: { createdAt: 'asc' } });
-    if (data && data.length > 0) return data;
-  } catch (err) {
-    console.warn('Postgres connection fallback for team:', err);
-  }
   return fallbackData.team;
 }
