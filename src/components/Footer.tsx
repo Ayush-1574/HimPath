@@ -1,139 +1,167 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ExternalLink, ShieldCheck, Heart } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, MapPin, ExternalLink, Globe, PhoneCall } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111827] text-gray-300 pt-14 pb-8 border-t-4 border-[#f25c05]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Col 1: About CEVA */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded bg-[#f25c05] flex items-center justify-center text-black font-black text-xs">
-                CEVA
+    <footer className="bg-[#071d2b] text-[#aebfc4] pt-16 pb-8 border-t border-white/10">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+          {/* Column 1: HiMPaTH Overview */}
+          <div className="md:col-span-5 space-y-4">
+            <div className="flex items-center space-x-3">
+              <div className="bg-white/95 rounded-md p-1.5 inline-block shadow-sm">
+                <div className="relative h-10 w-32">
+                  <Image
+                    src="/HiMPaTH-logo.svg"
+                    alt="HiMPaTH Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
-              <h3 className="text-white font-bold text-lg tracking-wide">
-                Centre of Excellence
-              </h3>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Centre of Excellence on sustainable Vernacular Architecture (CEVA) at IIT Ropar is funded by National Mission on Himalayan Studies (NMHS), Ministry of Environment, Forest &amp; Climate Change (MoEF&amp;CC), Government of India.
+            <p className="text-white font-bold text-base tracking-tight">
+              Himalayan Pathways for Transport and Highways
+            </p>
+            <p className="text-xs text-[#8ca4ab] leading-relaxed">
+              Centre of Excellence<br />
+              Department of Civil Engineering<br />
+              Indian Institute of Technology Ropar<br />
+              Rupnagar, Punjab – 140001, India
             </p>
             <div className="pt-2">
-              <span className="inline-block bg-emerald-950 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-700">
-                NMHS Supported Initiative
+              <span className="inline-block text-[11px] font-bold text-[#e4c982] bg-white/5 border border-[#e4c982]/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                Centre of Excellence · IIT Ropar
               </span>
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
-          <div>
-            <h4 className="text-white font-semibold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#f25c05]">
-              Quick Navigation
-            </h4>
-            <ul className="space-y-2.5 text-sm">
+          {/* Column 2: Explore Navigation */}
+          <div className="md:col-span-4 space-y-3">
+            <h3 className="text-white font-bold text-sm uppercase tracking-wider text-[#e4c982]">
+              Explore
+            </h3>
+            <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/about" className="hover:text-white hover:underline transition-colors">
-                  About the Centre
+                <Link href="/about/vision-mission" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Vision &amp; Mission
                 </Link>
               </li>
               <li>
-                <Link href="/vernacular-architecture" className="hover:text-white hover:underline transition-colors">
-                  Vernacular Architecture
+                <Link href="/about/objectives" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Strategic Objectives
                 </Link>
               </li>
               <li>
-                <Link href="/techniques" className="hover:text-white hover:underline transition-colors">
-                  Indigenous Techniques (Kath-Kuni &amp; Dhajji)
+                <Link href="/research/pillars" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Six Research Pillars
                 </Link>
               </li>
               <li>
-                <Link href="/activities" className="hover:text-white hover:underline transition-colors">
-                  Workshops &amp; Activities
+                <Link href="/research/ongoing" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Ongoing Research Studies
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="hover:text-white hover:underline transition-colors">
-                  Architectural Gallery &amp; Sketches
+                <Link href="/research/proposals" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Grant Proposals (DST, BRO)
                 </Link>
               </li>
               <li>
-                <Link href="/downloads" className="hover:text-white hover:underline transition-colors">
-                  Guidelines &amp; Research Downloads
+                <Link href="/research/facilities" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Research Facilities &amp; Labs
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects/ongoing" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Ongoing Funded Grants
+                </Link>
+              </li>
+              <li>
+                <Link href="/team/faculty" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Faculty Coordinators
+                </Link>
+              </li>
+              <li>
+                <Link href="/news/publications" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Scientific Publications
+                </Link>
+              </li>
+              <li>
+                <Link href="/news/workshops" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Workshops &amp; Training
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Research Focus */}
-          <div>
-            <h4 className="text-white font-semibold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#f25c05]">
-              Research Domains
-            </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
-                <span>Seismic Resilience of Interlocking Joints</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
-                <span>Life Cycle Assessment &amp; Carbon Footprint</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
-                <span>Dynamic Laser Scanning of Heritage Assets</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
-                <span>Modern Hybrid Building Guidelines</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
-                <span>Artisan Capacity &amp; Knowledge Archival</span>
-              </li>
-            </ul>
-          </div>
+          {/* Column 3: Connect */}
+          <div className="md:col-span-3 space-y-3">
+            <h3 className="text-white font-bold text-sm uppercase tracking-wider text-[#e4c982]">
+              Connect
+            </h3>
+            <div className="space-y-2.5 text-xs text-[#8ca4ab]">
+              <div className="flex items-start gap-2">
+                <Mail className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <div>
+                  <span className="block text-[10px] text-slate-400 uppercase font-semibold">Official Email</span>
+                  <a href="mailto:himpath@iitrpr.ac.in" className="text-slate-200 hover:text-[#e4c982] transition-colors font-medium">
+                    himpath@iitrpr.ac.in
+                  </a>
+                </div>
+              </div>
 
-          {/* Col 4: Contact Info */}
-          <div className="space-y-3">
-            <h4 className="text-white font-semibold text-base mb-4 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#f25c05]">
-              Contact Details
-            </h4>
-            <div className="flex items-start space-x-3 text-sm text-gray-400">
-              <MapPin className="w-5 h-5 text-[#f25c05] shrink-0 mt-0.5" />
-              <span>
-                Department of Civil Engineering, Indian Institute of Technology Ropar, Rupnagar, Punjab - 140001, India
-              </span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-400">
-              <Mail className="w-4 h-4 text-[#f25c05] shrink-0" />
-              <a href="mailto:ceva@iitrpr.ac.in" className="hover:text-white transition-colors">
-                ceva@iitrpr.ac.in
-              </a>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-400">
-              <ExternalLink className="w-4 h-4 text-[#f25c05] shrink-0" />
-              <a
-                href="https://www.iitrpr.ac.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                www.iitrpr.ac.in
-              </a>
+              <div className="flex items-start gap-2 pt-1">
+                <Globe className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <div>
+                  <span className="block text-[10px] text-slate-400 uppercase font-semibold">Institute Website</span>
+                  <a
+                    href="https://www.iitrpr.ac.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 hover:text-[#e4c982] transition-colors flex items-center gap-1"
+                  >
+                    <span>www.iitrpr.ac.in</span>
+                    <ExternalLink className="w-3 h-3 opacity-60" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2 pt-1">
+                <MapPin className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <div>
+                  <span className="block text-[10px] text-slate-400 uppercase font-semibold">Location</span>
+                  <a
+                    href="https://maps.google.com/?q=IIT+Ropar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 hover:text-[#e4c982] transition-colors flex items-center gap-1"
+                  >
+                    <span>IIT Ropar Main Campus</span>
+                    <ExternalLink className="w-3 h-3 opacity-60" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom copyright line */}
-        <div className="pt-8 mt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-          <p>
-            © {new Date().getFullYear()} CEVA, Indian Institute of Technology Ropar. All rights reserved.
-          </p>
-          <p className="flex items-center space-x-1">
-            <span>Funded by NMHS, MoEF&amp;CC, Govt. of India</span>
-          </p>
+        {/* Footer Bottom */}
+        <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-[#718790]">
+          <div>
+            © {new Date().getFullYear()} <strong className="text-slate-300 font-semibold">HiMPaTH</strong> · Department of Civil Engineering, IIT Ropar. All rights reserved.
+          </div>
+          <div className="flex items-center space-x-2 text-[#e4c982] font-semibold text-[10.5px] uppercase tracking-wider">
+            <span>Research</span>
+            <span>·</span>
+            <span>Innovation</span>
+            <span>·</span>
+            <span>Sustainability</span>
+            <span>·</span>
+            <span>Resilience</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120">
+  <defs>
+    <linearGradient id="himBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2c3d"/>
+      <stop offset="100%" stop-color="#1b5a6c"/>
+    </linearGradient>
+    <linearGradient id="roadGold2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#f3e5ab"/>
+      <stop offset="100%" stop-color="#c9a45b"/>
+    </linearGradient>
+    <linearGradient id="snowGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d6eceb"/>
+    </linearGradient>
+    <filter id="softGlow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Left Icon Emblem -->
+  <g transform="translate(8, 8)">
+    <rect x="0" y="0" width="104" height="104" rx="16" fill="url(#himBg2)" filter="url(#softGlow2)"/>
+    
+    <!-- Himalayan Peaks -->
+    <polygon points="12,86 42,34 68,68 84,42 98,86" fill="#17485c"/>
+    <polygon points="26,86 52,22 76,62 88,38 98,86" fill="#258b82" opacity="0.85"/>
+    
+    <!-- Snow Caps -->
+    <polygon points="52,22 43,38 52,35 59,42 62,34" fill="url(#snowGrad2)"/>
+    <polygon points="88,38 82,48 88,46 93,51 94,45" fill="url(#snowGrad2)"/>
+    
+    <!-- Winding Highway Ribbon -->
+    <path d="M12 92 C 38 86, 42 62, 60 58 S 84 76, 96 74" fill="none" stroke="url(#roadGold2)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M14 92 C 38 86, 42 62, 60 58 S 84 76, 96 74" fill="none" stroke="#0d303f" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+    
+    <!-- Subtle Star / Beacon -->
+    <circle cx="52" cy="16" r="3" fill="#e4c982"/>
+  </g>
+
+  <!-- Right Typography Block -->
+  <g transform="translate(124, 0)">
+    <!-- Brand Acronym -->
+    <text x="0" y="48" font-family="Inter, -apple-system, sans-serif" font-weight="900" font-size="38" fill="#102b3c" letter-spacing="-1.5">
+      HiM<tspan fill="#258b82">PaTH</tspan>
+    </text>
+    
+    <!-- Tagline / Full Title -->
+    <text x="0" y="70" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="11.5" fill="#1e667c" letter-spacing="0.2">
+      Himalayan Pathways for Transport &amp; Highways
+    </text>
+    
+    <!-- Department & Institute -->
+    <text x="0" y="88" font-family="Inter, -apple-system, sans-serif" font-weight="600" font-size="10" fill="#66767d" letter-spacing="0.5">
+      Centre of Excellence · Civil Engg · <tspan fill="#c9a45b" font-weight="800">IIT ROPAR</tspan>
+    </text>
+    
+    <!-- Decorative underline accent -->
+    <rect x="0" y="98" width="160" height="2.5" rx="1.25" fill="url(#roadGold2)"/>
+  </g>
+</svg>

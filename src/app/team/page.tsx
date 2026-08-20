@@ -1,40 +1,56 @@
 import React from 'react';
 import Link from 'next/link';
-import { Target, Compass, Building, ShieldCheck, ArrowRight, Sparkles, BookOpen, Layers } from 'lucide-react';
+import { Users, GraduationCap, Award, ArrowRight, Sparkles, Mail, CheckCircle2 } from 'lucide-react';
+import { facultyList, researchScholarsList, advisoryBoardList } from '@/lib/siteData';
 
 export const metadata = {
-  title: 'About HiMPaTH Directory | Centre of Excellence · IIT Ropar',
-  description: 'Overview of HiMPaTH (Himalayan Pathways for Transport and Highways) at IIT Ropar, including Vision, Mission, Objectives, and Mandate.',
+  title: 'HiMPaTH Team & Members Directory | IIT Ropar',
+  description: 'Meet the faculty coordinators, doctoral research scholars, project engineers, and national advisory committee at HiMPaTH.',
 };
 
-export default function AboutDirectoryPage() {
+export default function TeamDirectoryPage() {
   const sections = [
     {
-      title: 'Vision & Mission',
-      href: '/about/vision-mission',
-      badge: 'Guiding Philosophy',
-      icon: <Target className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Our overarching vision to lead sustainable, climate-resilient Himalayan road infrastructure, alongside our Sanskrit motto “आ नो भद्राः क्रतवो यन्तु विश्वतः”.',
-      highlights: ['Vision Statement', 'Mission Deliverables', 'Sanskrit Motto & Cultural Values'],
-      cta: 'Explore Vision & Mission',
+      title: 'Faculty Coordinators & PIs',
+      href: '/team/faculty',
+      badge: 'Principal Investigators',
+      icon: <Users className="w-8 h-8 text-[#e4c982]" />,
+      summary: 'Interdisciplinary faculty leading research across pavement materials, geomatics satellite mapping, and geotechnical slope resilience at IIT Ropar.',
+      count: facultyList.length,
+      highlights: [
+        'Dr. Surya Kant Sahdeo (Project Coordinator)',
+        'Dr. Shray Pathak (Co-Coordinator · Geomatics)',
+        'Dr. Raheena M (Co-Coordinator · Geotechnical)',
+      ],
+      cta: 'Meet Faculty Coordinators',
     },
     {
-      title: 'Core Objectives & Strategy',
-      href: '/about/objectives',
-      badge: 'Strategic Mandate',
-      icon: <Compass className="w-8 h-8 text-[#e4c982]" />,
-      summary: '6 core institutional objectives guiding multidisciplinary road research, climate-resilient DPR preparation, waste valorization, and national standard formulation.',
-      highlights: ['Terrain-Sensitive Planning', 'Sustainable Road Technologies', 'Waste Repurposing Protocols', 'IRC Codal Revisions'],
-      cta: 'View 6 Strategic Objectives',
+      title: 'Research Scholars & Engineers',
+      href: '/team/scholars',
+      badge: 'Doctoral & Project Staff',
+      icon: <GraduationCap className="w-8 h-8 text-[#e4c982]" />,
+      summary: 'Senior and Junior Research Fellows, doctoral candidates, and project engineers driving laboratory testing and computational modeling.',
+      count: researchScholarsList.length,
+      highlights: [
+        'Senior Research Fellows (Pavements)',
+        'Junior Research Fellows (Stabilization)',
+        'Project Engineers (AI & Computer Vision)',
+      ],
+      cta: 'View Research Scholars',
     },
     {
-      title: 'Institutional Mandate & Host',
-      href: '/about/mandate',
-      badge: 'IIT Ropar Hub',
-      icon: <Building className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Established at the Department of Civil Engineering, Indian Institute of Technology Ropar, bridging laboratory science and real-world mountain road deployment.',
-      highlights: ['Host Department Background', 'Dr. Surya Kant Sahdeo Leadership', 'State-of-the-Art Test Facilities'],
-      cta: 'View Mandate & History',
+      title: 'National Advisory Board',
+      href: '/team/advisors',
+      badge: 'Oversight Committee',
+      icon: <Award className="w-8 h-8 text-[#e4c982]" />,
+      summary: 'Senior technical experts from leading IITs, CRRI, Border Roads Organisation (BRO), and Ministry of Road Transport & Highways (MoRTH).',
+      count: advisoryBoardList.length,
+      highlights: [
+        'Technical Oversight Panel',
+        'National Mission Alignment',
+        'Multi-Agency Field Validation Guidance',
+      ],
+      cta: 'View Advisory Board',
     },
   ];
 
@@ -46,32 +62,32 @@ export default function AboutDirectoryPage() {
           <div className="flex items-center space-x-2 text-xs font-semibold text-[#e4c982] uppercase tracking-widest mb-4">
             <Link href="/" className="hover:underline">Home</Link>
             <span>›</span>
-            <span>About HiMPaTH</span>
+            <span>HiMPaTH Members</span>
           </div>
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#e4c982] text-xs font-black uppercase tracking-wider mb-4 border border-white/15">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Centre of Excellence · IIT Ropar</span>
+              <Users className="w-3.5 h-3.5" />
+              <span>Interdisciplinary Research Leadership</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              About HiMPaTH
+              The People Driving the Mission
             </h1>
             <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              Himalayan Pathways for Transport and Highways (HiMPaTH) is dedicated to advancing sustainable, climate-resilient, and innovative transportation infrastructure for the Indian Himalayan Region.
+              Bringing together world-class researchers across pavement materials, geotechnical engineering, geospatial intelligence, and smart asset management at IIT Ropar.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="mt-12 pt-6 border-t border-white/15 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-wider">
-            <Link href="/about/vision-mission" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              01 · Vision &amp; Mission
+            <Link href="/team/faculty" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
+              01 · Faculty Coordinators ({facultyList.length})
             </Link>
-            <Link href="/about/objectives" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              02 · Strategic Objectives
+            <Link href="/team/scholars" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
+              02 · Research Scholars &amp; Staff ({researchScholarsList.length})
             </Link>
-            <Link href="/about/mandate" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              03 · Institutional Mandate
+            <Link href="/team/advisors" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
+              03 · National Advisory Panel
             </Link>
           </div>
         </div>
@@ -104,7 +120,7 @@ export default function AboutDirectoryPage() {
 
                 <div className="space-y-2 mb-8 pt-4 border-t border-[#f0f5f4]">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
-                    What&apos;s Included
+                    Featured Members
                   </span>
                   {sec.highlights.map((hl, hIdx) => (
                     <div key={hIdx} className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">

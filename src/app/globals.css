@@ -2,42 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --font-inter: 'Inter', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
+  --ink: #102b3c;
+  --ink2: #173f52;
+  --blue: #1e667c;
+  --teal: #258b82;
+  --mist: #eef5f3;
+  --paper: #fbfcfa;
+  --gold: #c9a45b;
+  --gold2: #e4c982;
+  --text: #273943;
+  --muted: #66767d;
+  --line: #dbe5e4;
+  --white: #ffffff;
+  --shadow: 0 18px 50px rgba(15, 44, 58, 0.10);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+section[id], div[id] {
+  scroll-margin-top: 100px;
+}
+
 body {
-  color: #1e293b;
-  background-color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background-color: var(--paper);
+  line-height: 1.65;
   overflow-x: hidden;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0d2838;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #258b82;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #c9a45b;
 }
 
-/* Smooth card transitions */
-.hover-lift {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Mountain wave animations */
+@keyframes waveSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.5deg); }
 }
-.hover-lift:hover {
+
+.animate-float-slow {
+  animation: waveSlow 8s ease-in-out infinite;
+}
+
+/* Card hover glow */
+.card-hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(23, 63, 82, 0.15);
+  border-color: rgba(37, 139, 130, 0.4);
 }
