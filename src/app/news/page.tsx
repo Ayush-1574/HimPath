@@ -1,40 +1,40 @@
 import React from 'react';
 import Link from 'next/link';
-import { Newspaper, BookOpen, Calendar, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Newspaper, BookOpen, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import { newsArticlesList, publicationsList, workshopsList } from '@/lib/siteData';
 
 export const metadata = {
   title: 'News & Events Directory | HiMPaTH - IIT Ropar',
-  description: 'Research updates, journal publications, technical workshops, and field demonstrations at HiMPaTH.',
+  description: 'Events, site visits, scientific publications, and technical workshops at HiMPaTH.',
 };
 
 export default function NewsDirectoryPage() {
   const sections = [
     {
-      title: 'Research Updates & Press',
+      title: 'Events & Site Visits',
       href: '/news/updates',
-      badge: 'Latest Announcements',
+      badge: 'Academic & Industry Events',
       icon: <Newspaper className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Stay informed on laboratory milestones, experimental results, and upcoming field test tracks across Himachal Pradesh and Punjab.',
+      summary: 'Special lectures, academic-industry interactions, and field site visits hosted by HiMPaTH at IIT Ropar.',
       count: newsArticlesList.length,
       highlights: [
-        'Resilient Himalayan Road Infrastructure Milestones',
-        'Field Validation Test Tracks Preparation',
-        'Outreach & Media Announcements',
+        'Special Lecture: Dr. Rishi Singh Chhabra (DRG Industries)',
+        'Academic–Industry Perspectives & Student Interaction',
+        'Event Photo Gallery & Highlights',
       ],
-      cta: 'Read Research Updates',
+      cta: 'View Events & Site Visits',
     },
     {
-      title: 'Publications & Codal Papers',
+      title: 'Scientific Publications',
       href: '/news/publications',
       badge: 'Peer-Reviewed Science',
       icon: <BookOpen className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'High-impact journal articles, conference papers, and technical monographs authored by HiMPaTH researchers on pavement mechanics and slope stabilization.',
+      summary: 'High-impact journal articles, conference papers, and technical monographs authored by HiMPaTH researchers on pavement mechanics.',
       count: publicationsList.length,
       highlights: [
-        'Journal of Sustainable Transportation Engineering',
-        'Construction and Building Materials (Biochar VG-10)',
-        'Remote Sensing & Geospatial Corridor Risk Mapping',
+        'Peer-reviewed journal repository',
+        'Section kept for future publication releases',
+        'Codal contributions & technical papers',
       ],
       cta: 'View Publications Archive',
     },
@@ -43,14 +43,14 @@ export default function NewsDirectoryPage() {
       href: '/news/workshops',
       badge: 'Capacity Building',
       icon: <Calendar className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Executive workshops, hands-on laboratory testing sessions, and field training modules organized for highway engineers and researchers.',
+      summary: 'Executive workshops, hands-on laboratory testing sessions, and field training modules organized for highway engineers.',
       count: workshopsList.length,
       highlights: [
-        'National Workshop on Climate-Resilient Pavements (FDR/RCCP)',
-        'Drone LiDAR & AI Computer Vision for Road Distress Auditing',
-        'Interactive Laboratory Testing Masterclasses',
+        'Capacity building modules for highway engineers',
+        'Hands-on laboratory testing masterclasses',
+        'Section kept for future training programs',
       ],
-      cta: 'View Upcoming Workshops',
+      cta: 'View Workshops & Training',
     },
   ];
 
@@ -71,23 +71,23 @@ export default function NewsDirectoryPage() {
               <span>Knowledge Sharing &amp; Outreach</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              News, Publications &amp; Events
+              News, Events &amp; Outreach
             </h1>
             <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              Explore recent research updates, peer-reviewed scientific publications, and upcoming capacity-building workshops at IIT Ropar.
+              Explore recent events, special lectures, scientific publications, and capacity-building workshops at IIT Ropar.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="mt-12 pt-6 border-t border-white/15 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-wider">
             <Link href="/news/updates" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              01 · Research Updates ({newsArticlesList.length})
+              01 · Events &amp; Site Visits ({newsArticlesList.length})
             </Link>
             <Link href="/news/publications" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              02 · Scientific Publications ({publicationsList.length})
+              02 · Scientific Publications
             </Link>
             <Link href="/news/workshops" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              03 · Workshops &amp; Training ({workshopsList.length})
+              03 · Workshops &amp; Training
             </Link>
           </div>
         </div>

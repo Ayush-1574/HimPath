@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, FolderKanban, CheckCircle2, DollarSign, Handshake, Archive, Sparkles } from 'lucide-react';
-import { ongoingProjectsList, completedProjectsList, partnerCollaborationsList } from '@/lib/siteData';
+import { ArrowRight, FolderKanban, CheckCircle2, Handshake, Archive, Sparkles } from 'lucide-react';
+import { ongoingProjectsList, submittedProjectsList, completedProjectsList, partnerCollaborationsList } from '@/lib/siteData';
 
 export const metadata = {
   title: 'Projects Directory | HiMPaTH - IIT Ropar',
-  description: 'National and international sponsored research projects, field demonstrations, and agency partnerships at HiMPaTH.',
+  description: 'National sponsored research projects, proposals under review, and institutional engagement at HiMPaTH.',
 };
 
 export default function ProjectsDirectoryPage() {
@@ -15,43 +15,43 @@ export default function ProjectsDirectoryPage() {
       href: '/projects/ongoing',
       badge: 'Active Sponsored Grants',
       icon: <FolderKanban className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Centrally funded multi-year research projects sponsored by ANRF, NMHS, and institutional seed grants focusing on recycled pavements and landslide debris stabilization.',
+      summary: 'Centrally funded multi-year research projects sponsored by ANRF and ISIRD grants focusing on recycled pavements and freeze-thaw resilience.',
       count: ongoingProjectsList.length,
       highlights: [
-        'ANRF: RAP Viscosity & Pervious Concrete (₹58.57 L)',
-        'NMHS: Landslide Debris & Plastic Waste Valorization (₹44.53 L)',
-        'ISIRD: Freeze-Thaw Resilient Roads in Mountains (₹18.50 L)',
+        '01 · ANRF: RAP Binder Viscosity in Pervious Concrete (₹58.57 Lakh)',
+        '02 · ISIRD: Recycled Asphalt & Agro-Waste in RCCP (₹18.50 Lakh)',
+        '3 Submitted & Under Review Proposals (NTTM, BRO)',
       ],
       cta: 'Explore Ongoing Projects',
     },
     {
-      title: 'Completed Projects & Field Trials',
+      title: 'Completed Projects',
       href: '/projects/completed',
-      badge: 'Validated Milestones',
+      badge: 'Archive & Repository',
       icon: <Archive className="w-8 h-8 text-[#e4c982]" />,
       summary: 'Concluded investigations, laboratory verification monographs, and technology transfer dossiers catalogued for public and engineering adoption.',
       count: completedProjectsList.length,
       highlights: [
-        'Cold-In-Place Recycled Asphalt with Foamed Bitumen',
-        'Digital Terrain Modeling for Geotechnical Hazard Mapping',
-        'IRC Structural Coefficient Database Formulations',
+        'No completed projects listed at present',
+        'Repository kept for future additions',
+        'Institutional reports and codal monographs',
       ],
-      cta: 'View Completed Projects Archive',
+      cta: 'View Completed Projects',
     },
     {
-      title: 'Agency & Strategic Collaborations',
+      title: 'Institutional Engagement',
       href: '/projects/collaborations',
-      badge: 'Multi-Agency Partnerships',
+      badge: 'Multi-Agency Ecosystem',
       icon: <Handshake className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Active institutional partnerships with Border Roads Organisation (BRO), NHIDCL, MoRTH, and State Public Works Departments across Himalayan states.',
+      summary: 'Active institutional partnerships with Border Roads Organisation (BRO), NHIDCL, MoRTH & IRC, and State Public Works Departments.',
       count: partnerCollaborationsList.length,
       highlights: [
-        'Border Roads Organisation (BRO) Strategic Trials',
-        'NHIDCL Sustainable Tunnel Muck Paving Specifications',
-        'Indian Roads Congress (IRC) Codal Updates',
-        'State PWDs Highway Engineer Training',
+        'Border Roads Organisation (BRO) Strategic Partner',
+        'NHIDCL Highway Implementation Partner',
+        'MoRTH & Indian Roads Congress (IRC) Codal Body',
+        'State PWDs Regional Execution Agency',
       ],
-      cta: 'View Partner Collaborations',
+      cta: 'View Multi-Agency Ecosystem',
     },
   ];
 
@@ -75,7 +75,7 @@ export default function ProjectsDirectoryPage() {
               Projects with Purpose &amp; Impact
             </h1>
             <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              Explore national and international research grants, completed highway technology transfers, and strategic agency collaborations driving sustainable mountain connectivity.
+              Explore national research grants, submitted technology proposals, and institutional partnerships driving sustainable mountain connectivity.
             </p>
           </div>
 
@@ -85,10 +85,10 @@ export default function ProjectsDirectoryPage() {
               01 · Ongoing Funded Projects ({ongoingProjectsList.length})
             </Link>
             <Link href="/projects/completed" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              02 · Completed Projects ({completedProjectsList.length})
+              02 · Completed Projects
             </Link>
             <Link href="/projects/collaborations" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              03 · Partner Collaborations ({partnerCollaborationsList.length})
+              03 · Institutional Engagement ({partnerCollaborationsList.length})
             </Link>
           </div>
         </div>

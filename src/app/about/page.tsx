@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Target, Compass, Building, ShieldCheck, ArrowRight, Sparkles, BookOpen, Layers } from 'lucide-react';
+import { Target, Compass, Building, ArrowRight, Sparkles } from 'lucide-react';
 
 export const metadata = {
   title: 'About HiMPaTH Directory | Centre of Excellence · IIT Ropar',
@@ -14,18 +14,24 @@ export default function AboutDirectoryPage() {
       href: '/about/vision-mission',
       badge: 'Guiding Philosophy',
       icon: <Target className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Our overarching vision to lead sustainable, climate-resilient Himalayan road infrastructure, alongside our Sanskrit motto “आ नो भद्राः क्रतवो यन्तु विश्वतः”.',
-      highlights: ['Vision Statement', 'Mission Deliverables', 'Sanskrit Motto & Cultural Values'],
+      summary: 'Our overarching vision to lead sustainable, climate-resilient Himalayan road infrastructure, alongside our key strategic goals and core action pillars.',
+      highlights: ['Vision Statement', 'Key Strategic Goals', 'Core Action Pillars'],
       cta: 'Explore Vision & Mission',
     },
     {
-      title: 'Core Objectives & Strategy',
+      title: 'Strategic Objectives',
       href: '/about/objectives',
       badge: 'Strategic Mandate',
       icon: <Compass className="w-8 h-8 text-[#e4c982]" />,
-      summary: '6 core institutional objectives guiding multidisciplinary road research, climate-resilient DPR preparation, waste valorization, and national standard formulation.',
-      highlights: ['Terrain-Sensitive Planning', 'Sustainable Road Technologies', 'Waste Repurposing Protocols', 'IRC Codal Revisions'],
-      cta: 'View 6 Strategic Objectives',
+      summary: '5 core institutional objectives guiding multidisciplinary road research, climate-resilient DPR preparation, waste valorization, and national standard formulation.',
+      highlights: [
+        '01 · Climate-Resilient Planning & DPRs',
+        '02 · Advanced & Sustainable Road Technologies',
+        '03 · Integrated Drainage, Erosion & Slope Management',
+        '04 · Policy, Standards & Engineering Practices',
+        '05 · AI & Data-Driven Infrastructure Management',
+      ],
+      cta: 'View 5 Strategic Objectives',
     },
     {
       title: 'Institutional Mandate & Host',
@@ -33,8 +39,8 @@ export default function AboutDirectoryPage() {
       badge: 'IIT Ropar Hub',
       icon: <Building className="w-8 h-8 text-[#e4c982]" />,
       summary: 'Established at the Department of Civil Engineering, Indian Institute of Technology Ropar, bridging laboratory science and real-world mountain road deployment.',
-      highlights: ['Host Department Background', 'Dr. Surya Kant Sahdeo Leadership', 'State-of-the-Art Test Facilities'],
-      cta: 'View Mandate & History',
+      highlights: ['Department of Civil Engineering Foundation', 'Dr. Surya Kant Sahdeo Leadership', 'Government Agency Collaboration'],
+      cta: 'View Mandate & Host',
     },
   ];
 
@@ -68,7 +74,7 @@ export default function AboutDirectoryPage() {
               01 · Vision &amp; Mission
             </Link>
             <Link href="/about/objectives" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              02 · Strategic Objectives
+              02 · 5 Strategic Objectives
             </Link>
             <Link href="/about/mandate" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
               03 · Institutional Mandate

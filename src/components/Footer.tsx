@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, ExternalLink, Globe, PhoneCall } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Globe, Linkedin } from 'lucide-react';
+import { SITE_CONTACT } from '@/lib/siteData';
 
 export default function Footer() {
   return (
@@ -51,32 +52,27 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about/objectives" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Strategic Objectives
+                  <span className="text-[#258b82]">›</span> 5 Strategic Objectives
                 </Link>
               </li>
               <li>
-                <Link href="/research/pillars" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Six Research Pillars
-                </Link>
-              </li>
-              <li>
-                <Link href="/research/ongoing" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Ongoing Research Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="/research/proposals" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Grant Proposals (DST, BRO)
+                <Link href="/about/mandate" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Institutional Mandate
                 </Link>
               </li>
               <li>
                 <Link href="/research/facilities" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Research Facilities &amp; Labs
+                  <span className="text-[#258b82]">›</span> Research Facilities (01–04)
                 </Link>
               </li>
               <li>
                 <Link href="/projects/ongoing" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Ongoing Funded Grants
+                  <span className="text-[#258b82]">›</span> Ongoing Funded Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects/collaborations" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Multi-Agency Ecosystem
                 </Link>
               </li>
               <li>
@@ -85,13 +81,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/news/publications" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Scientific Publications
+                <Link href="/team/advisors" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Advisory Board
                 </Link>
               </li>
               <li>
-                <Link href="/news/workshops" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-[#258b82]">›</span> Workshops &amp; Training
+                <Link href="/news/updates" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="text-[#258b82]">›</span> Events &amp; Site Visits
                 </Link>
               </li>
             </ul>
@@ -107,8 +103,24 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] text-slate-400 uppercase font-semibold">Official Email</span>
-                  <a href="mailto:himpath@iitrpr.ac.in" className="text-slate-200 hover:text-[#e4c982] transition-colors font-medium">
-                    himpath@iitrpr.ac.in
+                  <a href={`mailto:${SITE_CONTACT.email}`} className="text-slate-200 hover:text-[#e4c982] transition-colors font-medium">
+                    {SITE_CONTACT.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2 pt-1">
+                <Linkedin className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <div>
+                  <span className="block text-[10px] text-slate-400 uppercase font-semibold">LinkedIn</span>
+                  <a
+                    href={SITE_CONTACT.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 hover:text-[#e4c982] transition-colors flex items-center gap-1"
+                  >
+                    <span>{SITE_CONTACT.linkedinHandle}</span>
+                    <ExternalLink className="w-3 h-3 opacity-60" />
                   </a>
                 </div>
               </div>
@@ -148,19 +160,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-white/10 pt-6 mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-[#718790]">
-          <div>
-            © {new Date().getFullYear()} <strong className="text-slate-300 font-semibold">HiMPaTH</strong> · Department of Civil Engineering, IIT Ropar. All rights reserved.
-          </div>
-          <div className="flex items-center space-x-2 text-[#e4c982] font-semibold text-[10.5px] uppercase tracking-wider">
-            <span>Research</span>
-            <span>·</span>
-            <span>Innovation</span>
-            <span>·</span>
-            <span>Sustainability</span>
-            <span>·</span>
-            <span>Resilience</span>
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#71858c]">
+          <p>© {new Date().getFullYear()} HiMPaTH · Centre of Excellence, IIT Ropar. All rights reserved.</p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/research" className="hover:text-white transition-colors">Research</Link>
+            <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>

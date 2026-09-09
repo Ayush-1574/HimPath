@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <rect width="600" height="450" fill="#102b3c"/>
+  <rect x="50" y="50" width="500" height="350" rx="16" fill="#1b455c" stroke="#258b82" stroke-width="3"/>
+  <rect x="100" y="90" width="220" height="140" rx="8" fill="#258b82" opacity="0.3"/>
+  <text x="210" y="165" fill="#e4c982" font-size="16" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">PRESENTATION SLIDE</text>
+  <circle cx="420" cy="150" r="40" fill="#e4c982" opacity="0.8"/>
+  <path d="M380,240 C380,200 460,200 460,240 Z" fill="#e4c982" opacity="0.8"/>
+  <text x="300" y="320" fill="#ffffff" font-size="18" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">Special Lecture: Dr. Rishi Singh Chhabra</text>
+  <text x="300" y="350" fill="#a0c2c8" font-size="13" font-family="system-ui, sans-serif" text-anchor="middle">Innovation, Research &amp; Industry Perspectives · HiMPaTH</text>
+</svg>

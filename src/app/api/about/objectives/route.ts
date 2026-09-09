@@ -6,33 +6,28 @@ export async function GET() {
     data: [
       {
         number: '01',
-        title: 'Climate-Resilient DPR Frameworks',
-        description: 'Establish terrain-sensitive detailed project report guidelines, integrating geotechnical slope risk and climate adaptation criteria.',
+        title: 'Climate-Resilient Planning & DPRs',
+        description: 'Develop climate-responsive Detailed Project Report (DPR) frameworks that integrate terrain, climatic and infrastructure considerations into the planning, design and implementation of sustainable roads in the Indian Himalayan Region.',
       },
       {
         number: '02',
-        title: 'Sustainable Road Technologies',
-        description: 'Advance full-depth reclamation (FDR), roller-compacted concrete (RCCP), and porous asphalt surfaces designed for extreme freeze-thaw mountain hydrology.',
+        title: 'Advanced & Sustainable Road Technologies',
+        description: 'Develop and demonstrate innovative, sustainable and climate-resilient construction technologies for PMGSY and rural roads, specifically adapted to the extreme climatic and challenging terrain conditions of the Himalayan region.',
       },
       {
         number: '03',
-        title: 'Waste Valorization & Circular Economy',
-        description: 'Repurpose regional mountain landslide debris, tunnel excavation muck, and post-consumer plastic waste to eliminate virgin aggregate quarrying.',
+        title: 'Integrated Drainage, Erosion & Slope Management',
+        description: 'Develop integrated approaches for drainage, storm-water management, erosion control and slope stabilization, supported by GIS-based terrain characterization and corridor planning to improve the resilience of Himalayan roads.',
       },
       {
         number: '04',
-        title: 'Slope Engineering & Drainage Resilience',
-        description: 'Develop high-velocity runoff dissipators, sub-surface siphons, and geosynthetic-bioengineered slope stabilization.',
+        title: 'Policy, Standards & Engineering Practices',
+        description: 'Generate scientific evidence and technical recommendations to support policy formulation, standardization and integration of climate-resilient technologies into Indian road codes, specifications and engineering practices.',
       },
       {
         number: '05',
-        title: 'Geospatial & AI Intelligence',
-        description: 'Generate 3D LiDAR terrain digital twins and deploy deep learning computer vision for automated road distress auditing.',
-      },
-      {
-        number: '06',
-        title: 'Policy & Indian Roads Congress (IRC) Codal Integration',
-        description: 'Formulate standard operating procedures, technical guidelines, and codal revisions for national highway agencies.',
+        title: 'AI & Data-Driven Infrastructure Management',
+        description: 'Develop AI- and data-driven tools for pavement distress mapping, performance prediction and vulnerability assessment, enabling informed decision-making and resilient management of Himalayan road networks.',
       },
     ],
   });

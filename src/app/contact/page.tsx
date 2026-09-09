@@ -4,18 +4,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Mail, 
-  Phone, 
   MapPin, 
   Send, 
   CheckCircle2, 
   Clock, 
   Building2, 
-  Globe, 
   Sparkles, 
   User, 
-  ArrowRight,
-  ShieldCheck
+  Linkedin
 } from 'lucide-react';
+import { SITE_CONTACT } from '@/lib/siteData';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -61,7 +59,7 @@ export default function ContactPage() {
         message: '' 
       });
     } catch (err: any) {
-      setErrorMessage('Could not send message. Please try again or email himpath@iitrpr.ac.in directly.');
+      setErrorMessage(`Could not send message. Please try again or email ${SITE_CONTACT.email} directly.`);
     } finally {
       setLoading(false);
     }
@@ -71,12 +69,6 @@ export default function ContactPage() {
     <div className="bg-[#fbfcfa] min-h-screen">
       {/* ── HERO BANNER ──────────────────────────────────────── */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#071e2e] via-[#0f3b4c] to-[#1a5b66] text-white overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <svg viewBox="0 0 1000 400" preserveAspectRatio="none" className="w-full h-full">
-            <polygon points="0,400 200,100 400,300 600,80 800,280 1000,150 1000,400 0,400" fill="white" />
-          </svg>
-        </div>
-
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center space-x-2 text-xs font-semibold text-[#e4c982] uppercase tracking-widest mb-4">
             <Link href="/" className="hover:underline">Home</Link>
@@ -95,7 +87,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              We welcome central and state road agencies (BRO, NHIDCL, MoRTH, State PWDs), research sponsors, international academic collaborators, industry partners, and prospective PhD scholars.
+              We welcome central and state road agencies (MoRTH, BRO, NHAI, PMGSY, State PWDs), research sponsors, international academic collaborators, industry partners, and prospective researchers.
             </p>
           </div>
         </div>
@@ -128,7 +120,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-extrabold text-[#102b3c] text-xs uppercase tracking-wider">Host Department &amp; Campus</h3>
                     <p className="text-xs sm:text-sm text-[#4e636d] mt-0.5 leading-relaxed">
-                      Department of Civil Engineering, Indian Institute of Technology Ropar, Rupnagar, Punjab – 140001, India
+                      {SITE_CONTACT.location}
                     </p>
                   </div>
                 </div>
@@ -139,12 +131,12 @@ export default function ContactPage() {
                     <User className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-[#102b3c] text-xs uppercase tracking-wider">Project Coordinator</h3>
+                    <h3 className="font-extrabold text-[#102b3c] text-xs uppercase tracking-wider">Centre Lead</h3>
                     <p className="text-xs sm:text-sm text-[#102b3c] font-bold mt-0.5">
                       Dr. Surya Kant Sahdeo
                     </p>
                     <p className="text-xs text-slate-500">
-                      Assistant Professor, Civil Engineering, IIT Ropar
+                      Assistant Professor, Department of Civil Engineering, IIT Ropar
                     </p>
                   </div>
                 </div>
@@ -157,10 +149,28 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-extrabold text-[#102b3c] text-xs uppercase tracking-wider">Official Email</h3>
                     <a
-                      href="mailto:himpath@iitrpr.ac.in"
+                      href={`mailto:${SITE_CONTACT.email}`}
                       className="text-xs sm:text-sm text-[#258b82] hover:underline font-bold block mt-0.5"
                     >
-                      himpath@iitrpr.ac.in
+                      {SITE_CONTACT.email}
+                    </a>
+                  </div>
+                </div>
+
+                {/* LinkedIn */}
+                <div className="flex items-start gap-3.5">
+                  <div className="w-10 h-10 rounded-xl bg-[#e6f2ef] text-[#258b82] flex items-center justify-center shrink-0 mt-0.5">
+                    <Linkedin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-[#102b3c] text-xs uppercase tracking-wider">LinkedIn</h3>
+                    <a
+                      href={SITE_CONTACT.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-sm text-[#258b82] hover:underline font-bold block mt-0.5"
+                    >
+                      linkedin/{SITE_CONTACT.linkedinHandle}
                     </a>
                   </div>
                 </div>
@@ -177,19 +187,6 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* Sanskrit Motto Badge */}
-              <div className="p-4 rounded-2xl bg-gradient-to-r from-[#102b3c] to-[#174e61] text-white text-center">
-                <span className="text-[10px] font-bold text-[#e4c982] uppercase tracking-widest block mb-0.5">
-                  Centre Motto
-                </span>
-                <p className="font-serif text-sm text-[#e4c982]">
-                  “आ नो भद्राः क्रतवो यन्तु विश्वतः”
-                </p>
-                <p className="text-[11px] text-slate-300 italic mt-0.5">
-                  Let noble thoughts come from everywhere
-                </p>
               </div>
             </div>
           </div>
@@ -211,7 +208,7 @@ export default function ContactPage() {
                     Inquiry Submitted Successfully!
                   </h4>
                   <p className="text-xs sm:text-sm text-[#3b545f] max-w-md mx-auto leading-relaxed">
-                    Thank you for reaching out to HiMPaTH, Department of Civil Engineering, IIT Ropar. The project team will review your inquiry and respond shortly.
+                    Thank you for reaching out to HiMPaTH, Department of Civil Engineering, IIT Ropar. The project team will review your inquiry and respond promptly.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -252,7 +249,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="rajesh@agency.gov.in"
+                        placeholder="name@agency.gov.in"
                         className="w-full px-4 py-3 rounded-xl border border-[#dbe5e4] text-xs sm:text-sm text-[#102b3c] focus:outline-none focus:ring-2 focus:ring-[#258b82] focus:border-transparent transition-all"
                       />
                     </div>
@@ -267,7 +264,7 @@ export default function ContactPage() {
                         type="text"
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                        placeholder="e.g. BRO / NHIDCL / State PWD / University"
+                        placeholder="e.g. BRO / NHIDCL / PWD"
                         className="w-full px-4 py-3 rounded-xl border border-[#dbe5e4] text-xs sm:text-sm text-[#102b3c] focus:outline-none focus:ring-2 focus:ring-[#258b82] focus:border-transparent transition-all"
                       />
                     </div>
@@ -281,11 +278,10 @@ export default function ContactPage() {
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl border border-[#dbe5e4] text-xs sm:text-sm text-[#102b3c] focus:outline-none focus:ring-2 focus:ring-[#258b82] focus:border-transparent transition-all bg-white"
                       >
-                        <option value="Research Collaboration">Research Collaboration / Joint Grant</option>
-                        <option value="Laboratory Testing Services">Laboratory Testing (DSR, UTM, Freeze-Thaw)</option>
-                        <option value="Pilot Track Demonstration">Field Pilot Track Demonstration</option>
-                        <option value="DPR Consultancy">Climate-Resilient DPR Technical Review</option>
-                        <option value="PhD / Scholar Opportunity">PhD / Research Scholar Application</option>
+                        <option value="Research Collaboration">Agency / Research Collaboration</option>
+                        <option value="Testing Services">Laboratory Testing Services</option>
+                        <option value="Field Demonstration">Field Demonstration &amp; Pilots</option>
+                        <option value="Doctoral Admissions">PhD &amp; Research Scholar Inquiries</option>
                         <option value="General Inquiry">General Technical Inquiry</option>
                       </select>
                     </div>
@@ -299,21 +295,21 @@ export default function ContactPage() {
                       type="text"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="e.g. In-Situ Full-Depth Reclamation Pilot Proposal"
+                      placeholder="e.g. In-situ testing of cold recycling binders"
                       className="w-full px-4 py-3 rounded-xl border border-[#dbe5e4] text-xs sm:text-sm text-[#102b3c] focus:outline-none focus:ring-2 focus:ring-[#258b82] focus:border-transparent transition-all"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-black text-[#102b3c] uppercase tracking-wider mb-2">
-                      Message &amp; Scope *
+                      Message Details *
                     </label>
                     <textarea
                       required
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Please describe your proposal, technical question, or requirement in detail..."
+                      placeholder="Please describe your specific inquiry, proposed partnership scope, or experimental testing requirements..."
                       className="w-full px-4 py-3 rounded-xl border border-[#dbe5e4] text-xs sm:text-sm text-[#102b3c] focus:outline-none focus:ring-2 focus:ring-[#258b82] focus:border-transparent transition-all"
                     />
                   </div>
@@ -321,14 +317,14 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#258b82] hover:bg-[#102b3c] text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-[#258b82] hover:bg-[#102b3c] text-white font-extrabold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-50"
                   >
                     {loading ? (
-                      <span>Sending Message...</span>
+                      <span>Sending inquiry...</span>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        <span>Submit Inquiry to HiMPaTH</span>
+                        <span>Submit Inquiry</span>
                       </>
                     )}
                   </button>

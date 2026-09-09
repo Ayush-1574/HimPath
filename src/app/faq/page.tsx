@@ -28,7 +28,7 @@ const himpathFaqs = [
   {
     id: 'faq-5',
     question: 'How can external organizations or researchers collaborate with HiMPaTH?',
-    answer: 'We actively collaborate through sponsored research grants, joint field trials, laboratory testing consultancies, and capacity-building workshops. Prospective collaborators can contact Project Coordinator Dr. Surya Kant Sahdeo or email himpath@iitrpr.ac.in.',
+    answer: 'We actively collaborate through sponsored research grants, joint field trials, laboratory testing consultancies, and capacity-building workshops. Prospective collaborators can contact Centre Lead Dr. Surya Kant Sahdeo or email himpath.coe@iitrpr.ac.in.',
   },
   {
     id: 'faq-6',

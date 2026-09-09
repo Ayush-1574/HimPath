@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3c54"/>
+      <stop offset="50%" stop-color="#4a708b"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+    <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#9bb3c4"/>
+      <stop offset="100%" stop-color="#2d4a5e"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a444c"/>
+      <stop offset="100%" stop-color="#1a2026"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="650" cy="180" r="70" fill="#ffd166" opacity="0.8"/>
+  <polygon points="100,280 280,120 420,290 580,90 750,320 800,600 0,600" fill="url(#mountain1)"/>
+  <polygon points="0,380 200,240 380,390 560,200 800,420 800,600 0,600" fill="#1b3345"/>
+  <polygon points="0,480 320,360 480,440 680,340 800,460 800,600 0,600" fill="#0f212e"/>
+  <!-- Winding Mountain Highway -->
+  <path d="M400,360 Q520,400 580,450 T750,600 L850,600 L300,600 Z" fill="url(#road)"/>
+  <path d="M400,360 Q520,400 580,450 T750,600" stroke="#f4d35e" stroke-width="6" stroke-dasharray="16,12" fill="none"/>
+  <text x="400" y="550" fill="#ffffff" font-size="20" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle" letter-spacing="3">HIMALAYAN HIGHWAY INFRASTRUCTURE</text>
+</svg>

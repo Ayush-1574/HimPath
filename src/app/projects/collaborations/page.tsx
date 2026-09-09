@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Handshake, Building2, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Handshake } from 'lucide-react';
 import { partnerCollaborationsList } from '@/lib/siteData';
 
 export const metadata = {
-  title: 'Agency & Strategic Collaborations | HiMPaTH - IIT Ropar',
-  description: 'Multi-agency institutional partnerships with Border Roads Organisation (BRO), NHIDCL, MoRTH, and State PWDs.',
+  title: 'Institutional Engagement | HiMPaTH - IIT Ropar',
+  description: 'Multi-Agency Implementation Ecosystem with Border Roads Organisation (BRO), NHIDCL, MoRTH & IRC, and State PWDs.',
 };
 
 export default function CollaborationsPage() {
@@ -19,18 +19,21 @@ export default function CollaborationsPage() {
             <span>›</span>
             <Link href="/projects" className="hover:underline">Projects</Link>
             <span>›</span>
-            <span>Partner Collaborations</span>
+            <span>Institutional Engagement</span>
           </div>
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#e4c982] text-xs font-black uppercase tracking-wider mb-4 border border-white/15">
               <Handshake className="w-3.5 h-3.5" />
-              <span>Multi-Agency Implementation Ecosystem</span>
+              <span>Institutional Engagement</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              Agency &amp; Strategic Partnerships
+              Multi-Agency Implementation Ecosystem
             </h1>
-            <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
+            <p className="text-[#e4c982] font-semibold text-lg sm:text-xl mt-3">
+              Agency &amp; Strategic Partnerships
+            </p>
+            <p className="text-[#d2e4e8] text-sm sm:text-base mt-3 leading-relaxed">
               HiMPaTH actively interfaces with strategic defence organizations, central infrastructure corporations, national standard-setting bodies, and state departments to deploy research into active mountain road contracts.
             </p>
           </div>
@@ -46,11 +49,11 @@ export default function CollaborationsPage() {
               className="bg-white rounded-3xl border border-[#dbe5e4] p-8 sm:p-10 shadow-card hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between gap-2 mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                   <span className="px-3 py-1 rounded-full bg-[#e6f2ef] text-[#258b82] text-[10px] font-black tracking-widest uppercase">
                     {partner.category}
                   </span>
-                  <span className="text-xs font-bold text-slate-500">
+                  <span className="text-xs font-bold text-[#c9a45b]">
                     {partner.contactRole}
                   </span>
                 </div>
@@ -82,7 +85,7 @@ export default function CollaborationsPage() {
                 <span className="text-xs text-slate-500 font-semibold">Institutional Interface</span>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#258b82] hover:text-[#102b3c] uppercase tracking-wider"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#258b82] hover:bg-[#102b3c] text-white text-xs font-bold uppercase tracking-wider transition-all"
                 >
                   <span>Propose Collaboration</span>
                   <ArrowRight className="w-3.5 h-3.5" />

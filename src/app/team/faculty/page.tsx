@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { Users, Mail, ArrowRight, CheckCircle2, Sparkles, Building2 } from 'lucide-react';
-import { facultyList } from '@/lib/siteData';
+import { Users, Mail, ArrowRight } from 'lucide-react';
+import { facultyList, SITE_CONTACT } from '@/lib/siteData';
 
 export const metadata = {
-  title: 'Faculty Coordinators & PIs | HiMPaTH - IIT Ropar',
+  title: 'Faculty Coordinators | HiMPaTH - IIT Ropar',
   description: 'Principal investigators and faculty coordinators leading HiMPaTH research at IIT Ropar.',
 };
 
@@ -25,13 +25,13 @@ export default function FacultyPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#e4c982] text-xs font-black uppercase tracking-wider mb-4 border border-white/15">
               <Users className="w-3.5 h-3.5" />
-              <span>Principal Investigators &amp; Leadership</span>
+              <span>Leadership &amp; Coordination</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
               Faculty Coordinators
             </h1>
             <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              Meet the faculty members at the Department of Civil Engineering, IIT Ropar driving research innovation in mountain highway systems.
+              Faculty coordinators at the Department of Civil Engineering, IIT Ropar leading research across pavement materials, geomatics, and geotechnical engineering.
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function FacultyPage() {
 
               <div>
                 <span className="text-[10.5px] font-black uppercase tracking-wider text-[#258b82] block mb-2">
-                  Specialized Research Focus Areas
+                  Research Areas
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {faculty.researchFocus.map((focus, fIdx) => (

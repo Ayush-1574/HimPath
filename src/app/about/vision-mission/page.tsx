@@ -4,7 +4,7 @@ import { Target, Compass, Sparkles, CheckCircle2, ArrowRight } from 'lucide-reac
 
 export const metadata = {
   title: 'Vision & Mission | HiMPaTH - IIT Ropar',
-  description: 'The vision, mission, and Sanskrit motto guiding sustainable and resilient mountain transport infrastructure.',
+  description: 'The vision, mission, strategic goals, and core action pillars guiding sustainable and resilient mountain transport infrastructure.',
 };
 
 export default function VisionMissionPage() {
@@ -38,22 +38,6 @@ export default function VisionMissionPage() {
 
       {/* Main Content */}
       <section className="py-20 lg:py-24 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Sanskrit Motto Card */}
-        <div className="bg-gradient-to-br from-[#102b3c] via-[#174e61] to-[#1c646b] rounded-3xl p-10 sm:p-14 text-white text-center shadow-2xl relative overflow-hidden">
-          <span className="text-[10px] font-black uppercase tracking-[3px] text-[#e4c982] block mb-3">
-            Inspirational Ethos
-          </span>
-          <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#e4c982] tracking-wide font-normal mb-4">
-            “आ नो भद्राः क्रतवो यन्तु विश्वतः”
-          </div>
-          <p className="text-sm sm:text-base text-[#d8e8ea] max-w-xl mx-auto italic">
-            “Let noble thoughts come from everywhere.”
-          </p>
-          <p className="text-xs text-[#b0c8cc] max-w-2xl mx-auto mt-4 leading-relaxed">
-            Rigveda 1.89.1 — Emphasizing open interdisciplinary collaboration, global scientific knowledge exchange, and indigenous mountain engineering wisdom.
-          </p>
-        </div>
-
         {/* Vision & Mission Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision */}
@@ -73,19 +57,25 @@ export default function VisionMissionPage() {
               </p>
             </div>
 
-            <div className="pt-6 border-t border-[#eef4f3] space-y-2">
-              <span className="text-[10.5px] font-black uppercase tracking-wider text-slate-400 block mb-2">Key Strategic Goals</span>
+            <div className="pt-6 border-t border-[#eef4f3] space-y-2.5">
+              <span className="text-[11px] font-black uppercase tracking-wider text-[#258b82] block mb-2">
+                Key Strategic Goals
+              </span>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>Zero-Rutting, High-Durability Mountain Highway Pavements</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>High-Performance Himalayan Pavements</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>100% Repurposing of Regional Landslide Debris &amp; Muck</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Sustainable Resource Utilization</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>Standardized Climate-Resilient Detailed Project Reports</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Climate-Resilient Infrastructure Planning</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Innovation to Implementation</span>
               </div>
             </div>
           </div>
@@ -107,19 +97,25 @@ export default function VisionMissionPage() {
               </p>
             </div>
 
-            <div className="pt-6 border-t border-[#eef4f3] space-y-2">
-              <span className="text-[10.5px] font-black uppercase tracking-wider text-slate-400 block mb-2">Core Action Pillars</span>
+            <div className="pt-6 border-t border-[#eef4f3] space-y-2.5">
+              <span className="text-[11px] font-black uppercase tracking-wider text-[#258b82] block mb-2">
+                Core Action Pillars
+              </span>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>Laboratory Micro-Mechanical &amp; Dynamic Durability Testing</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Advanced Research &amp; Testing</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>Instrumented Field Pilot Test Tracks with BRO &amp; NHIDCL</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Field Validation &amp; Demonstration</span>
               </div>
               <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#258b82] shrink-0 mt-0.5" />
-                <span>Indian Roads Congress (IRC) Codal Contributions</span>
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Engineering Standards &amp; Guidelines</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-[#258b82] shrink-0 mt-0.5" />
+                <span>Training &amp; Capacity Building</span>
               </div>
             </div>
           </div>

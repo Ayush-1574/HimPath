@@ -1,49 +1,43 @@
 import React from 'react';
 import Link from 'next/link';
-import { Compass, CheckCircle2, ArrowRight, Sparkles, Layers, Recycle, Activity, MapPin, Cpu, ShieldCheck } from 'lucide-react';
+import { Compass, Layers, Activity, ShieldCheck, Cpu, ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: 'Strategic Objectives | HiMPaTH - IIT Ropar',
-  description: 'Six core strategic objectives guiding climate-resilient road infrastructure research at IIT Ropar.',
+  description: 'Advancing Resilient, Sustainable & Technology-Driven Road Infrastructure across the Indian Himalayan Region.',
 };
 
 export default function ObjectivesPage() {
   const objectives = [
     {
       num: '01',
-      title: 'Climate-Resilient DPR Preparation Frameworks',
-      description: 'Formulating scientific Detailed Project Report (DPR) guidelines that account for mountain micro-climates, extreme hydrology, and geotechnical slope vulnerability instead of plain-terrain assumptions.',
+      title: 'Climate-Resilient Planning & DPRs',
+      description: 'Develop climate-responsive Detailed Project Report (DPR) frameworks that integrate terrain, climatic and infrastructure considerations into the planning, design and implementation of sustainable roads in the Indian Himalayan Region.',
       icon: <Compass className="w-6 h-6 text-[#e4c982]" />,
     },
     {
       num: '02',
-      title: 'Advanced Sustainable Road Technologies',
-      description: 'Developing high-performance Full-Depth Reclamation (FDR), rapid-curing Roller-Compacted Concrete (RCCP), and porous asphalt surfaces engineered for freeze-thaw and heavy multi-axle loading.',
+      title: 'Advanced & Sustainable Road Technologies',
+      description: 'Develop and demonstrate innovative, sustainable and climate-resilient construction technologies for PMGSY and rural roads, specifically adapted to the extreme climatic and challenging terrain conditions of the Himalayan region.',
       icon: <Layers className="w-6 h-6 text-[#e4c982]" />,
     },
     {
       num: '03',
-      title: 'Waste Valorization & Circular Construction',
-      description: 'Systematically grading, chemically stabilizing, and repurposing mountain landslide muck, excavation debris, and post-consumer plastic waste to eliminate pristine riverbed quarrying.',
-      icon: <Recycle className="w-6 h-6 text-[#e4c982]" />,
-    },
-    {
-      num: '04',
-      title: 'Drainage Resilience & Slope Stabilization',
-      description: 'Designing high-velocity runoff dissipators, sub-surface siphons, high-tensile geosynthetics, and native bioengineered vegetation root matrices for stable mountain highway cuttings.',
+      title: 'Integrated Drainage, Erosion & Slope Management',
+      description: 'Develop integrated approaches for drainage, storm-water management, erosion control and slope stabilization, supported by GIS-based terrain characterization and corridor planning to improve the resilience of Himalayan roads.',
       icon: <Activity className="w-6 h-6 text-[#e4c982]" />,
     },
     {
-      num: '05',
-      title: 'Geospatial Intelligence & AI Infrastructure',
-      description: 'Deploying high-resolution satellite remote sensing, LiDAR 3D terrain digital twins, and deep learning computer vision algorithms for automated highway distress detection.',
-      icon: <Cpu className="w-6 h-6 text-[#e4c982]" />,
+      num: '04',
+      title: 'Policy, Standards & Engineering Practices',
+      description: 'Generate scientific evidence and technical recommendations to support policy formulation, standardization and integration of climate-resilient technologies into Indian road codes, specifications and engineering practices.',
+      icon: <ShieldCheck className="w-6 h-6 text-[#e4c982]" />,
     },
     {
-      num: '06',
-      title: 'National Codal & Policy Integration',
-      description: 'Drafting evidence-based standard specifications and contributing to Indian Roads Congress (IRC) and MoRTH codes to fast-track laboratory technologies into commercial EPC tenders.',
-      icon: <ShieldCheck className="w-6 h-6 text-[#e4c982]" />,
+      num: '05',
+      title: 'AI & Data-Driven Infrastructure Management',
+      description: 'Develop AI- and data-driven tools for pavement distress mapping, performance prediction and vulnerability assessment, enabling informed decision-making and resilient management of Himalayan road networks.',
+      icon: <Cpu className="w-6 h-6 text-[#e4c982]" />,
     },
   ];
 
@@ -66,10 +60,13 @@ export default function ObjectivesPage() {
               <span>Core Action Roadmap</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              Six Strategic Objectives
+              Objectives
             </h1>
-            <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              HiMPaTH operates under 6 clear, action-oriented strategic objectives to deliver safer, more durable, and climate-adaptive road networks across Himalayan states.
+            <p className="text-[#e4c982] font-semibold text-lg sm:text-xl mt-3">
+              Advancing Resilient, Sustainable &amp; Technology-Driven Road Infrastructure
+            </p>
+            <p className="text-[#d2e4e8] text-sm sm:text-base mt-3 leading-relaxed">
+              HiMPaTH operates under 5 clear, action-oriented strategic objectives to deliver safer, more durable, and climate-adaptive road networks across Himalayan states.
             </p>
           </div>
         </div>
@@ -81,7 +78,7 @@ export default function ObjectivesPage() {
           {objectives.map((obj, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl border border-[#dbe5e4] p-8 shadow-card hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+              className={`bg-white rounded-3xl border border-[#dbe5e4] p-8 shadow-card hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between ${idx === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#10384a] to-[#258b82] flex items-center justify-center mb-6 shadow-md">

@@ -1,56 +1,54 @@
 import React from 'react';
 import Link from 'next/link';
-import { Users, GraduationCap, Award, ArrowRight, Sparkles, Mail, CheckCircle2 } from 'lucide-react';
-import { facultyList, researchScholarsList, advisoryBoardList } from '@/lib/siteData';
+import { Users, GraduationCap, Award, ArrowRight, Sparkles } from 'lucide-react';
+import { facultyList, researchScholarsList, advisoryBoardInfo } from '@/lib/siteData';
 
 export const metadata = {
   title: 'HiMPaTH Team & Members Directory | IIT Ropar',
-  description: 'Meet the faculty coordinators, doctoral research scholars, project engineers, and national advisory committee at HiMPaTH.',
+  description: 'Meet the faculty coordinators, doctoral research scholars, and national advisory stakeholders at HiMPaTH.',
 };
 
 export default function TeamDirectoryPage() {
   const sections = [
     {
-      title: 'Faculty Coordinators & PIs',
+      title: 'Faculty Coordinators',
       href: '/team/faculty',
-      badge: 'Principal Investigators',
+      badge: 'Principal Leadership',
       icon: <Users className="w-8 h-8 text-[#e4c982]" />,
       summary: 'Interdisciplinary faculty leading research across pavement materials, geomatics satellite mapping, and geotechnical slope resilience at IIT Ropar.',
       count: facultyList.length,
       highlights: [
-        'Dr. Surya Kant Sahdeo (Project Coordinator)',
-        'Dr. Shray Pathak (Co-Coordinator · Geomatics)',
-        'Dr. Raheena M (Co-Coordinator · Geotechnical)',
+        'Dr. Surya Kant Sahdeo (Centre Lead)',
+        'Dr. Shray Pathak (Faculty Coordinator)',
+        'Dr. Raheena M (Faculty Coordinator)',
       ],
       cta: 'Meet Faculty Coordinators',
     },
     {
-      title: 'Research Scholars & Engineers',
+      title: 'Advisory Board & Governance',
+      href: '/team/advisors',
+      badge: 'Governance & Oversight',
+      icon: <Award className="w-8 h-8 text-[#e4c982]" />,
+      summary: 'National and technical collaboration with academic institutions, government agencies, and road-sector stakeholders.',
+      highlights: [
+        'Strategic Technical Guidance',
+        'Policy & Codal Alignment',
+        'MoRTH, BRO, NHAI, PMGSY, State PWDs',
+      ],
+      cta: 'View Advisory Board',
+    },
+    {
+      title: 'Research Scholars & Staff',
       href: '/team/scholars',
       badge: 'Doctoral & Project Staff',
       icon: <GraduationCap className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Senior and Junior Research Fellows, doctoral candidates, and project engineers driving laboratory testing and computational modeling.',
-      count: researchScholarsList.length,
+      summary: 'Doctoral candidates, research fellows, and project engineers driving laboratory testing and computational modeling.',
       highlights: [
-        'Senior Research Fellows (Pavements)',
-        'Junior Research Fellows (Stabilization)',
-        'Project Engineers (AI & Computer Vision)',
+        'Pavement Engineering Scholars',
+        'Geotechnical & Stabilization Researchers',
+        'AI & Computer Vision Engineers',
       ],
       cta: 'View Research Scholars',
-    },
-    {
-      title: 'National Advisory Board',
-      href: '/team/advisors',
-      badge: 'Oversight Committee',
-      icon: <Award className="w-8 h-8 text-[#e4c982]" />,
-      summary: 'Senior technical experts from leading IITs, CRRI, Border Roads Organisation (BRO), and Ministry of Road Transport & Highways (MoRTH).',
-      count: advisoryBoardList.length,
-      highlights: [
-        'Technical Oversight Panel',
-        'National Mission Alignment',
-        'Multi-Agency Field Validation Guidance',
-      ],
-      cta: 'View Advisory Board',
     },
   ];
 
@@ -68,7 +66,7 @@ export default function TeamDirectoryPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#e4c982] text-xs font-black uppercase tracking-wider mb-4 border border-white/15">
               <Users className="w-3.5 h-3.5" />
-              <span>Interdisciplinary Research Leadership</span>
+              <span>Interdisciplinary Leadership</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
               The People Driving the Mission
@@ -83,11 +81,11 @@ export default function TeamDirectoryPage() {
             <Link href="/team/faculty" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
               01 · Faculty Coordinators ({facultyList.length})
             </Link>
-            <Link href="/team/scholars" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              02 · Research Scholars &amp; Staff ({researchScholarsList.length})
-            </Link>
             <Link href="/team/advisors" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
-              03 · National Advisory Panel
+              02 · Advisory Board &amp; Governance
+            </Link>
+            <Link href="/team/scholars" className="px-4 py-2.5 rounded-lg bg-white/10 hover:bg-[#c9a45b] hover:text-[#102b3c] transition-all border border-white/10">
+              03 · Research Scholars &amp; Staff
             </Link>
           </div>
         </div>
@@ -120,7 +118,7 @@ export default function TeamDirectoryPage() {
 
                 <div className="space-y-2 mb-8 pt-4 border-t border-[#f0f5f4]">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
-                    Featured Members
+                    Highlights
                   </span>
                   {sec.highlights.map((hl, hIdx) => (
                     <div key={hIdx} className="flex items-start gap-2 text-xs text-[#173f52] font-semibold">

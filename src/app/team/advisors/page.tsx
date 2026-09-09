@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { Award, Mail, ArrowRight, CheckCircle2, Shield, Sparkles } from 'lucide-react';
-import { advisoryBoardList } from '@/lib/siteData';
+import { Award, CheckCircle2, ShieldCheck, Building } from 'lucide-react';
+import { advisoryBoardInfo } from '@/lib/siteData';
 
 export const metadata = {
-  title: 'National Advisory Board | HiMPaTH - IIT Ropar',
-  description: 'National Technical Advisory Committee and senior mentors supporting HiMPaTH Centre of Excellence.',
+  title: 'Advisory Board & Governance | HiMPaTH - IIT Ropar',
+  description: 'Institutional Governance & Collaboration, National & Technical Collaboration at HiMPaTH.',
 };
 
 export default function AdvisorsPage() {
@@ -25,13 +25,16 @@ export default function AdvisorsPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#e4c982] text-xs font-black uppercase tracking-wider mb-4 border border-white/15">
               <Award className="w-3.5 h-3.5" />
-              <span>Institutional Oversight &amp; Strategic Mentorship</span>
+              <span>{advisoryBoardInfo.title}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
-              National Advisory Board
+              Advisory Board
             </h1>
-            <p className="text-[#d2e4e8] text-base sm:text-lg mt-6 leading-relaxed">
-              Comprising senior academic leaders, chief engineers from strategic organizations, and highway policy experts guiding research alignment and national impact.
+            <p className="text-[#e4c982] font-semibold text-lg sm:text-xl mt-3">
+              {advisoryBoardInfo.subtitle}
+            </p>
+            <p className="text-[#d2e4e8] text-sm sm:text-base mt-3 leading-relaxed">
+              {advisoryBoardInfo.description}
             </p>
           </div>
         </div>
@@ -39,53 +42,48 @@ export default function AdvisorsPage() {
 
       {/* Advisory Body Details */}
       <section className="py-20 lg:py-24 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {advisoryBoardList.map((adv) => (
-          <div
-            key={adv.id}
-            className="bg-white rounded-3xl border border-[#dbe5e4] p-8 sm:p-12 shadow-card hover:shadow-xl transition-all duration-300 relative overflow-hidden"
-          >
-            <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-[#eef4f3]">
-              <div className="flex items-start gap-4 sm:gap-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#10384a] to-[#258b82] text-[#e4c982] flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
-                  {adv.initials}
-                </div>
-                <div>
-                  <span className="px-3 py-1 rounded-full bg-[#e6f2ef] text-[#258b82] text-[10px] font-black tracking-widest uppercase mb-2 inline-block">
-                    {adv.role}
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102b3c] leading-tight">
-                    {adv.name}
-                  </h2>
-                  <p className="text-xs sm:text-sm font-bold text-[#258b82]">
-                    {adv.designation}
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    {adv.institution}
-                  </p>
-                </div>
+        <div className="bg-white rounded-3xl border border-[#dbe5e4] p-8 sm:p-12 shadow-card">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Areas of Collaboration */}
+            <div>
+              <div className="text-[#258b82] text-[11px] font-black uppercase tracking-[2.4px] mb-2">
+                Strategic Scope
               </div>
+              <h2 className="text-2xl font-extrabold text-[#102b3c] mb-6">
+                Areas of Collaboration
+              </h2>
+              <ul className="space-y-3.5">
+                {advisoryBoardInfo.areasOfCollaboration.map((area, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-sm text-[#173f52] font-semibold">
+                    <CheckCircle2 className="w-5 h-5 text-[#258b82] shrink-0 mt-0.5" />
+                    <span>{area}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="pt-6 space-y-6">
-              <p className="text-sm sm:text-base text-[#495e67] leading-relaxed">
-                {adv.bio}
-              </p>
-
-              <div>
-                <span className="text-[10.5px] font-black uppercase tracking-wider text-[#258b82] block mb-2">
-                  Advisory Mandate Areas
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {adv.researchFocus.map((f, idx) => (
-                    <span key={idx} className="px-3 py-1.5 rounded-lg bg-[#f6faf8] text-[#173f52] text-xs font-semibold border border-[#dbe5e4]">
-                      {f}
-                    </span>
-                  ))}
-                </div>
+            {/* Key Stakeholders */}
+            <div>
+              <div className="text-[#258b82] text-[11px] font-black uppercase tracking-[2.4px] mb-2">
+                Partners &amp; Institutions
+              </div>
+              <h2 className="text-2xl font-extrabold text-[#102b3c] mb-6">
+                Key Stakeholders
+              </h2>
+              <div className="grid grid-cols-2 gap-3">
+                {advisoryBoardInfo.keyStakeholders.map((sh, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-[#f7faf9] border border-[#dbe5e4] flex items-center gap-2.5 font-bold text-xs text-[#102b3c]"
+                  >
+                    <Building className="w-4 h-4 text-[#258b82] shrink-0" />
+                    <span>{sh}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        ))}
+        </div>
       </section>
     </div>
   );
